@@ -1,4 +1,4 @@
-const slider = (catalogue, currentTrack, status = "init") => {
+const slider = ( status = "init") => {
     console.log("initialisation du slider");
     /* console.dir(catalogue);
     console.log(catalogue[0].cover); */
@@ -10,7 +10,7 @@ const slider = (catalogue, currentTrack, status = "init") => {
     switch (status) {
         case "init":
             const coverSlider = document.createElement("img");
-            coverSlider.src = coverUrl + catalogue[currentTrack].cover;
+            coverSlider.src = coverUrl +catalogue[currentTrack].cover;
             coverSlider.id = "coverSlider";
             // prepend insere un element avant ceux qui existent déjà dans le parent
             //sliderHTML.prepend(coverSlider);

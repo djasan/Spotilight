@@ -1,58 +1,69 @@
+import { catalogue } from "./modules/catalogue.js";
+import { slider } from "./modules/slider.js";
+import { audio } from "./modules/audio.js";
+
 const prevButton = document.querySelector("#prev");
+const nextButton = document.querySelector("#next");
+const playPause = document.querySelector("#playPause");
+globalThis.catalogue = catalogue;
+globalThis.track = null;
+globalThis.currentTrack = 0;
+globalThis.isPlaying = false;
+const statusButtonPlayPause = () => {
+  if (!isPlaying)
+    playPause.innerText = "pause";
+
+  else {
+    playPause.innerText = "play";
+  }
+
+}
+// Gestion du bouton "prev"
 prevButton.addEventListener("click", () => {
   if (currentTrack > 0) {
     currentTrack--;
   } else {
     currentTrack = catalogue.length - 1;
   }
-  slider(catalogue, currentTrack, "prev");
+  slider("prev");
+  audio("pause");
+  audio();//"init";
+  audio("play");
+
   console.log(currentTrack);
 });
 
-const nextButton = document.querySelector("#next");
-// click sur le bouton next
+// Gestion du bouton "next"
 nextButton.addEventListener("click", () => {
   if (currentTrack < catalogue.length - 1) {
     currentTrack++;
   } else {
     currentTrack = 0;
   }
-  slider(catalogue, currentTrack, "next");
+  slider("next");
+  audio("pause");
+  audio();//"init";
+  audio("play");
   console.log(currentTrack);
 });
 
-import { catalogue } from "./modules/catalogue.js";
-import { slider } from "./modules/slider.js";
-import { audio } from "./modules/audio.js";
-// console.dir(catalogue);
-let currentTrack = 0;
-let isPlaying = false;
-
-
-
-// action bouton play
-
 playPause.addEventListener("click", () => {
-  if(isPlaying){ 
-    isPlaying = false;
- 
-  
-  } else {  
-    isPlaying = true;
+  if (!isPlaying) {
 
+    audio("play")
+  } else {
+
+    audio("pause")
   }
-  
- 
-
- 
-  isPlaying = !isPlaying;
+  statusButtonPlayPause();
+  isPlaying = !isPlaying
 });
 
 
-slider(catalogue, currentTrack);
-audio(catalogue, currentTrack);
 
 
 
-const playPause = document.getElementById("playPause");
+// Initialisation de la page
+slider();
+audio();
 
