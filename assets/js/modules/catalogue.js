@@ -34,7 +34,7 @@ const catalogue = [
         genre: ["rock alternatif"],
         année: 2023,
         cover: "awolnation.jpg",
-        audio: "SAIL - AWOLNATION.mp3 "
+        audio: "SAIL - AWOLNATION.mp3 ",
         album: "blabla",
         like: false
     }
