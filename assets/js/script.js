@@ -11,10 +11,10 @@ globalThis.currentTrack = 0;
 globalThis.isPlaying = false;
 const statusButtonPlayPause = () => {
   if (!isPlaying)
-    playPause.innerText = "pause";
+    playPause.innerText = "play";
 
   else {
-    playPause.innerText = "play";
+    playPause.innerText = "pause";
   }
 
 }
@@ -29,8 +29,9 @@ prevButton.addEventListener("click", () => {
   audio("pause");
   audio();//"init";
   audio("play");
+  isPlaying = true;
+  statusButtonPlayPause();
 
-  console.log(currentTrack);
 });
 
 // Gestion du bouton "next"
@@ -44,19 +45,25 @@ nextButton.addEventListener("click", () => {
   audio("pause");
   audio();//"init";
   audio("play");
-  console.log(currentTrack);
-});
+  console.log(isPlaying);
+  isPlaying = true;
+  statusButtonPlayPause();
 
+});
+// Gestion du bouton "playPause"
 playPause.addEventListener("click", () => {
   if (!isPlaying) {
-
-    audio("play")
+    isPlaying = true;
+    audio("play");
   } else {
+    isPlaying = false;
+  
+    audio("pause");
 
-    audio("pause")
+
   }
   statusButtonPlayPause();
-  isPlaying = !isPlaying
+  // isPlaying = !isPlaying
 });
 
 
