@@ -16,8 +16,21 @@ const initSlider = () => {
     imgA.id = "imgA";
     sliderHTML.append(imgA);
 
-
 }
+const nextSlider = () => {
+    document.querySelector("#coverSlider").src =
+      coverUrl + catalogue[currentTrack].cover;
+    document.querySelector("#imgA").classList.add("transSlider");
+    document.querySelector("#imgA").classList.add("slideRight");
+    setTimeout(() => {
+      document.querySelector("#imgA").src =
+        coverUrl + catalogue[currentTrack].cover;
+      document.querySelector("#imgA").classList.remove("transSlider");
+      document.querySelector("#imgA").classList.remove("slideRight");
+    },500);
+  };
+
+
 
 const slider = (status = "init") => {
     console.log("initialisation du slider");
@@ -33,8 +46,11 @@ const slider = (status = "init") => {
 
             break;
         case "next":
-            document.querySelector("#coverSlider").src =
-                coverUrl + catalogue[currentTrack].cover;
+            nextSlider();
+
+
+
+
             break;
         case "prev":
             document.querySelector("#coverSlider").src =
