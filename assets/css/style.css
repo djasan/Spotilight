@@ -175,10 +175,21 @@ color: #e51414;
 
 
   }
+#time{
+border: 2rem antiquewhite;
+height: 1.5rem;
+
+}
 
 
+
+#subtime{
+border: 2rem  aquamarine;
+height:1.5rem ;
+background-color: #0026ff;
+}
   /* Styles spécifiques pour les écrans de bureau */
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width:576px) {
     .slides-container {
       height: auto; /* Ajustez la hauteur en fonction du contenu */
     }
