@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spotilight</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spotilight</title> <link rel="stylesheet" href="./assets/css/slider.css">
-
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+      integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script type="module" src="./assets/js/script.js" defer></script>
-</head>
+    <link rel="stylesheet" href="./assets/css/slider.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body>
-
-
+  <body>
     <div id="player">
-        <div id="slider">
-            <p>spotilight</p>
-        </div>
-        <div id="navigation"></div>
-        <button id="prev"> previous</button>
-        <button id="next">next</button>
-        <button id="playPause">play</button>
-
+      <div id="slider">
+        <p>spotilight</p>
+      </div>
+      <div id="navigation"></div>
+      <button id="prev">previous</button>
+      <button id="next">next</button>
+      <button id="play-pause">play</button>
     </div>
+    <div id="playlist">
+      <div>
+        <i class="fa-solid fa-play-pause"></i>
+      </div>
 
-
-
-
-
-
-
-
-
-</body>
-
+      <div>
+        <i class="fa-regular fa-play-pause"></i>
+      </div>
+    </div>
+  </body>
 </html>
