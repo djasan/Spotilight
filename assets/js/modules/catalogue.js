@@ -129,17 +129,18 @@ const catalogue = [
         album: "blabla",
         like: false
     },
-    {
+    
 
-        titre: "dépression au dessus du jardin",
-        artiste: "serge gainsbourg",
-        genre: ["divers pop"],
-        année: 1986,
-        cover: "serge gainsbourg.jpg",
-        audio: "SERGE GAINSBOURG - DEPRESSION AU DESSUS DU JARDIN.mp3 ",
-        album: "blabla",
-        like: false
-    }
+        {
+            titre: "mojo so dope",
+            artiste: "kid cudy",
+            genre: ["divers "],
+            année: 2010,
+            cover: "kid cudi.jpg",
+            audio: "Kid-CuDi - Mojo So Dope .mp3 ",
+            album: "blabla",
+            like: false,
+          },
 
 ]
 export {

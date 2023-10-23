@@ -5,11 +5,11 @@ const coverUrl = "./assets/img/cover/";
 const initSlider = () => {
     const coverSlider = document.createElement("img");
     coverSlider.src = coverUrl + catalogue[currentTrack].cover;
-    coverSlider.id = "coverSlider";
+   
     // prepend insere un element avant ceux qui existent déjà dans le parent
     //sliderHTML.prepend(coverSlider);
     // append insere un element après ceux qui existent déjà dans le parent
-    sliderHTML.append(coverSlider);
+    
 
     const imgA = document.createElement("img");
     imgA.src = coverUrl + catalogue[currentTrack].cover;
@@ -18,8 +18,7 @@ const initSlider = () => {
 
 }
 const nextSlider = () => {
-    document.querySelector("#coverSlider").src =
-      coverUrl + catalogue[currentTrack].cover;
+   
     document.querySelector("#imgA").classList.add("transSlider");
     document.querySelector("#imgA").classList.add("slideRight");
     setTimeout(() => {
